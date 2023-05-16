@@ -4,13 +4,14 @@ import "./style/css/bootstrap.min.css";
 import "./style/fonts/icomoon/style.css";
 import "./style/css/owl.carousel.min.css";
 
-import image from "./style/images/female.jpg";
+import image from "./style/images/abc.png";
 import Image from "next/image";
-import Link from "next/link";
+
 import { useState } from "react";
 export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState();
 
   async function getData() {
     const response = await fetch("http://127.0.0.1:8000/api/token", {
@@ -25,15 +26,17 @@ export default function Login() {
     });
 
     if (!response.ok) {
+      setError("Email or password wrong!");
       throw new Error(`Error ${res.statusText}`);
     } else {
       response.json().then((data) => {
         localStorage.setItem("token", data.access);
         localStorage.setItem("refresh", data.refresh);
+        window.location.replace("/");
       });
     }
   }
-
+  console.log("state error", error);
   return (
     <div className='content'>
       <div className='container'>
@@ -46,7 +49,6 @@ export default function Login() {
               <div className='col-md-8'>
                 <div className='mb-4'>
                   <h3>
-                    Login in to <br></br>
                     <strong style={{ color: "rgb(43 183 144)" }}>
                       Pharmacy Store Management System
                     </strong>
@@ -94,14 +96,14 @@ export default function Login() {
                       </a>
                     </span>
                   </div>
-
-                  {/* <Link href='/'> */}
                   <button
                     type='submit'
                     className='btn text-white btn-block btn-primary'>
                     Log In
                   </button>
-                  {/* </Link> */}
+                  {error && (
+                    <p className='error bg-warning text-black my-4'>{error}</p>
+                  )}
                   <span className='d-block text-left my-4 text-muted'>
                     {" "}
                     or sign in with

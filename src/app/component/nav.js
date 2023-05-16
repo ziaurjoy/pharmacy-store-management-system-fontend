@@ -143,10 +143,10 @@ export default function Nav({ hideItem }) {
               </li>
             </li>
             <li>
-              <a href='#'>Balance Adjustment</a>
+              <Link href='/customer-add'>Add New Customer</Link>
             </li>
             <li>
-              <a href='#'>Cash Adjustment</a>
+              <Link href='/customer-list'>Customer List</Link>
             </li>
             <li>
               <a href='#'>Bank Adjustment</a>

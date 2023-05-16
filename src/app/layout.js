@@ -6,6 +6,7 @@ import "./style/assets/css/font-awesome.min.css";
 import "./style/assets/css/apexcharts.css";
 import "./style/assets/css/style.css";
 import "./style/assets/css/responsive.css";
+import "./style/assets/css/google-font.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
