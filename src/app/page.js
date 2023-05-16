@@ -1,95 +1,192 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Dashboard from "./dashboard/page";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <Dashboard>
+      {/* <!-- dashboard-grids --> */}
+      <div className='dashboard-grids'>
+        <div className='row'>
+          <div className='col-sm-6 col-md-4 col-lg-3'>
+            <div className='dashboard-grid bg-green'>
+              <div className='icons'>
+                <i className='fa fa-users' aria-hidden='true'></i>
+              </div>
+              <div className='grid-text'>
+                <h3>55</h3>
+                <h4>Total Employee</h4>
+              </div>
+              <a href='#'>Total Employee</a>
+            </div>
+          </div>
+          <div className='col-sm-6 col-md-4 col-lg-3'>
+            <div className='dashboard-grid bg-pase'>
+              <div className='icons'>
+                <i className='fa fa-user-plus' aria-hidden='true'></i>
+              </div>
+              <div className='grid-text'>
+                <h3>44</h3>
+                <h4>Today's Presents</h4>
+              </div>
+              <a href='#'>Today's Presents</a>
+            </div>
+          </div>
+          <div className='col-sm-6 col-md-4 col-lg-3'>
+            <div className='dashboard-grid bg-bringal'>
+              <div className='icons'>
+                <i className='fa fa-user-times' aria-hidden='true'></i>
+              </div>
+              <div className='grid-text'>
+                <h3>12</h3>
+                <h4>Today's Absents</h4>
+              </div>
+              <a href='#'>Today's Absents</a>
+            </div>
+          </div>
+          <div className='col-sm-6 col-md-4 col-lg-3'>
+            <div className='dashboard-grid bg-darkgreen'>
+              <div className='icons'>
+                <i className='fa fa-user' aria-hidden='true'></i>
+              </div>
+              <div className='grid-text'>
+                <h3>23</h3>
+                <h4>Today's Leave</h4>
+              </div>
+              <a href='#'>Today's Leave</a>
+            </div>
+          </div>
         </div>
       </div>
+      {/* <!-- dashboard-grids --> */}
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      {/* <!-- current-status --> */}
+      <div className='current-status'>
+        <div className='title2'>
+          <h3>Current leave status </h3>
+        </div>
+        <div className='status'>
+          <ul>
+            <li>
+              <b>Casual leave</b>
+            </li>
+            <li>Allowed: 05</li>
+            <li>Adjusted: 05</li>
+            <li>Taken: 05</li>
+            <li>Remaining: 05</li>
+            <li>Excess: 05</li>
+          </ul>
+        </div>
       </div>
+      {/* <!-- current-status --> */}
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+      {/* <!-- month-summary --> */}
+      <div className='month-summary'>
+        <div className='title2'>
+          <h3>My monthy attendance summary</h3>
+        </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        <div className='summary'>
+          <table className='table month'>
+            <thead>
+              <tr>
+                <th scope='col'>Sun</th>
+                <th scope='col'>Mon</th>
+                <th scope='col'>Tue</th>
+                <th scope='col'>Wed</th>
+                <th scope='col'>Thu</th>
+                <th scope='col'>Fri</th>
+                <th scope='col'>Sat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span className='weeknd'>1</span>{" "}
+                </td>
+                <td>2</td>
+                <td>
+                  <span className='delay'>3</span>
+                </td>
+                <td>
+                  <span className='delay'>4</span>
+                </td>
+                <td>
+                  <span className='delay'>5</span>
+                </td>
+                <td>6</td>
+                <td>
+                  <span className='weeknd'>7</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span className='weeknd'>8</span>
+                </td>
+                <td>9</td>
+                <td>10</td>
+                <td>
+                  <span className='absents'>11</span>
+                </td>
+                <td>12</td>
+                <td>13</td>
+                <td>
+                  <span className='weeknd'>14</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span className='weeknd'>15</span>
+                </td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+                <td>
+                  <span className='weeknd'>21</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span className='weeknd'>22</span>
+                </td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+                <td>
+                  <span className='weeknd'>28</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span className='weeknd'>29</span>
+                </td>
+                <td>30</td>
+                <td>31</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+              </tr>
+            </tbody>
+          </table>
+          <div className='hinch'>
+            <ul>
+              <li>
+                <span className='delay-color'></span> Extremely delay
+              </li>
+              <li>
+                <span className='absents-color'></span> Absents
+              </li>
+              <li>
+                <span className='weeknd-color'></span> Weeknd
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </main>
-  )
+      {/* <!-- month-summary --> */}
+    </Dashboard>
+  );
 }

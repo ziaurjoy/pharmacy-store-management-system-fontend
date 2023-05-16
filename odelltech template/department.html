@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <!-- Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="Responsive, Multipurpose, one page, Portfolio, Business">
+    <meta name="description" content="Responsive HTML Business Template">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <!-- CSS style  links-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/apexcharts.css">
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+</head>
+
+<body>
+    <!-- loader -->
+    <div class="loaders">
+        <div class="loader"></div>
+    </div>
+    <!-- loader -->
+
+
+    
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><i class="fa fa-university" aria-hidden="true"></i> Department Form</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form">
+                        <form>
+                            <div class="mb-3">
+                                <label for="Department" class="form-label">Department Name</label>
+                                <input type="text" class="form-control" id="Department">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="Department" class="form-label">Date / Time</label>
+                                <div class="input-group" id="datetimepicker3" >
+                                    <span class="add-on input-group-text"><i class="fa fa-calendar-o" aria-hidden="true"></i></span>
+                                    <input class="form-control" data-format="dd-MM-yyyy HH:mm:ss PP" type="text" placeholder="Select date and time">
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="Department" class="form-label">Date</label>
+                                <div class="input-group" id="datetimepicker1" >
+                                    <span class="add-on input-group-text"><i class="fa fa-calendar-o" aria-hidden="true"></i></span>
+                                    <input class="form-control" data-format="dd-MM-yyyy" type="text" placeholder="Select Date">
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="Department" class="form-label">Time</label>
+                                <div class="input-group" id="datetimepicker2" >
+                                    <span class="add-on input-group-text"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                                    <input class="form-control" data-format="HH:mm:ss PP" type="text" placeholder="Select time">
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="cus-btn2">Reset</button>
+                    <button type="button" class="cus-btn" data-bs-dismiss="modal"><i class="fa fa-floppy-o"
+                            aria-hidden="true"></i> Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- main-area -->
+    <section class="main-area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 p-0">
+                    <!-- menu -->
+                    <div class="menu-area fixed-menu">
+                        <div class="closes"><i class="fa fa-times" aria-hidden="true"></i></div>
+
+                        <!-- logo -->
+                        <div class="logo desktop-view">
+                            <a href="dashboard.html">
+                                <img class="small-logo" src="assets/img/logo-s.png" alt="logo">
+                                <img class="big-logo" src="assets/img/logo.png" alt="logo">
+                            </a>
+                        </div>
+                        <!-- logo -->
+                        <!-- user -->
+                        <div class="user">
+                            <img class="img-fluid" src="assets/img/user.png" alt="">
+                            <h4>HOLOPZD ANBEPZD</h4>
+                            <p><span class="dot"></span> admin</p>
+                        </div>
+                        <!-- user -->
+                        <nav class="menu">
+                            <ul>
+                                <li><a href="dashboard.html"><i class="fa fa-tachometer" aria-hidden="true"></i> <span
+                                            class="hide-item">Dashboard </span></a></li>
+
+                                <li><a href="javascript:void(0)"><i class="fa fa-address-book-o" aria-hidden="true"></i>
+                                        <span class="hide-item"> Accounts </span> <span class="drop-icon"><i
+                                                class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+
+                                    <!-- sub-menu -->
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Chart of Account</a></li>
+                                        <li><a href="#">Balance Adjustment</a></li>
+                                        <li><a href="#">Cash Adjustment</a></li>
+                                        <li><a href="#">Bank Adjustment</a></li>
+                                        <li><a href="#">Payment Type</a></li>
+                                        <li><a href="#">Debit Voucher</a></li>
+                                        <li><a href="#">Credit Voucher</a></li>
+                                        <li><a href="#">Contra Voucher</a></li>
+                                        <li><a href="#">Journal Voucher</a></li>
+                                        <li><a href="javascript:void(0)">Voucher Approval <span class="drop-icon"><i
+                                                        class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+                                            <ul class="sub-sub">
+                                                <li><a href="#">Cash Book</a></li>
+                                                <li><a href="#">Bank Book</a></li>
+                                                <li><a href="#">General Ledger</a></li>
+                                                <li><a href="#">Trial Balance</a></li>
+                                                <li><a href="#">Profit Loss</a></li>
+                                                <li><a href="#">Cash Flow</a></li>
+                                                <li><a href="#">Coa Print</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <!-- sub-menu -->
+
+                                </li>
+
+                                <li><a href="javascript:void(0)"><i class="fa fa-diamond" aria-hidden="true"></i> <span
+                                            class="hide-item"> Asset </span> <span class="drop-icon"><i
+                                                class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+
+                                    <!-- sub-menu -->
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Asset Type</a></li>
+                                        <li><a href="#">Equipment</a></li>
+                                        <li><a href="#">Asset Assignment</a></li>
+                                        <li><a href="javascript:void(0)">Return <span class="drop-icon"><i
+                                                        class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+                                            <ul class="sub-sub">
+                                                <li><a href="#">Return Assets</a></li>
+                                                <li><a href="#">Return List</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <!-- sub-menu -->
+
+                                </li>
+
+                                <li><a href="javascript:void(0)"><i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                                        <span class="hide-item"> Attendance </span> <span class="drop-icon"><i
+                                                class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+
+                                    <!-- sub-menu -->
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Attendance Form</a></li>
+                                        <li><a href="#">Monthly Attendance</a></li>
+                                        <li><a href="#">Missing Attendance</a></li>
+                                        <li><a href="#">Attendance Log</a></li>
+                                    </ul>
+                                    <!-- sub-menu -->
+
+                                </li>
+
+                                <li><a href="javascript:void(0)"><i class="fa fa-trophy" aria-hidden="true"></i> <span
+                                            class="hide-item"> Award </span> <span class="drop-icon"><i
+                                                class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+
+                                    <!-- sub-menu -->
+                                    <ul class="sub-menu">
+                                        <li><a href="#">New Award</a></li>
+                                    </ul>
+                                    <!-- sub-menu -->
+
+                                </li>
+                                <li><a href="javascript:void(0)"><i class="fa fa-university" aria-hidden="true"></i>
+                                        <span class="hide-item"> Bank </span> <span class="drop-icon"><i
+                                                class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+
+                                    <!-- sub-menu -->
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Add Bank</a></li>
+                                        <li><a href="#">Bank List</a></li>
+                                    </ul>
+                                    <!-- sub-menu -->
+
+                                </li>
+
+                                <li><a class="active" href="javascript:void(0)"><i class="fa fa-university"
+                                            aria-hidden="true"></i> <span class="hide-item"> Department </span> <span
+                                            class="drop-icon"><i class="fa fa-angle-down"
+                                                aria-hidden="true"></i></span></a>
+
+                                    <!-- sub-menu -->
+                                    <ul class="sub-menu">
+                                        <li><a href="department.html">Department</a></li>
+                                        <li><a href="javascript:void(0)">Division <span class="drop-icon"><i
+                                                        class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+                                            <ul class="sub-sub">
+                                                <li><a href="#">Add Division</a></li>
+                                                <li><a href="#">Manage Division </a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <!-- sub-menu -->
+
+                                </li>
+
+                                <li><a href="javascript:void(0)"><i class="fa fa-users" aria-hidden="true"></i> <span
+                                            class="hide-item"> Employee </span> <span class="drop-icon"><i
+                                                class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+
+                                    <!-- sub-menu -->
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Position</a></li>
+                                        <li><a href="javascript:void(0)"> Employee <span class="drop-icon"><i
+                                                        class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+                                            <ul class="sub-sub">
+                                                <li><a href="#">Add Employee</a></li>
+                                                <li><a href="#">Manage Employee</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Employee Performance</a></li>
+                                    </ul>
+                                    <!-- sub-menu -->
+
+                                </li>
+
+                                <li><a href="javascript:void(0)"><i class="fa fa-money" aria-hidden="true"></i> <span
+                                            class="hide-item"> Expense </span> <span class="drop-icon"><i
+                                                class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+
+                                    <!-- sub-menu -->
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Expense Item</a></li>
+                                        <li><a href="#">Expense Sheet</a></li>
+                                        <li><a href="#">Expense Statement</a></li>
+                                    </ul>
+                                    <!-- sub-menu -->
+
+                                </li>
+
+                                <li><a href="javascript:void(0)"><i class="fa fa-money" aria-hidden="true"></i> <span
+                                            class="hide-item"> Income </span> <span class="drop-icon"><i
+                                                class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+
+                                    <!-- sub-menu -->
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Income Field</a></li>
+                                        <li><a href="#">Income Sheet</a></li>
+                                        <li><a href="#">Income Statement</a></li>
+                                    </ul>
+                                    <!-- sub-menu -->
+
+                                </li>
+
+                                <li><a href="javascript:void(0)"><i class="fa fa-plane" aria-hidden="true"></i> <span
+                                            class="hide-item"> Leave </span> <span class="drop-icon"><i
+                                                class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+
+                                    <!-- sub-menu -->
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Weekly Holiday</a></li>
+                                        <li><a href="#">Holiday</a></li>
+                                        <li><a href="javascript:void(0)">Leave Application <span class="drop-icon"><i
+                                                        class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+                                            <ul class="sub-sub">
+                                                <li><a href="#">Add Leave Type</a></li>
+                                                <li><a href="#">Leave Application</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <!-- sub-menu -->
+
+                                </li>
+
+
+                                <li><a href="javascript:void(0)"><i class="fa fa-money" aria-hidden="true"></i> <span
+                                            class="hide-item"> Loan </span> <span class="drop-icon"><i
+                                                class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+
+                                    <!-- sub-menu -->
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Grant Loan</a></li>
+                                        <li><a href="#">Loan Installment</a></li>
+                                        <li><a href="#">Loan Report</a></li>
+                                    </ul>
+                                    <!-- sub-menu -->
+
+                                </li>
+
+
+                                <li><a href="javascript:void(0)"><i class="fa fa-bell-o" aria-hidden="true"></i> <span
+                                            class="hide-item"> Notice Board </span> <span class="drop-icon"><i
+                                                class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+
+                                    <!-- sub-menu -->
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Notice Board</a></li>
+                                    </ul>
+                                    <!-- sub-menu -->
+
+                                </li>
+
+                                <li><a href="javascript:void(0)"><i class="fa fa-credit-card" aria-hidden="true"></i>
+                                        <span class="hide-item"> Payroll </span> <span class="drop-icon"><i
+                                                class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+
+                                    <!-- sub-menu -->
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Salary Type Setup</a></li>
+                                        <li><a href="#">Salary SetUp</a></li>
+                                        <li><a href="#">Salary Generate</a></li>
+                                        <li><a href="#">Manage Employee Salary</a></li>
+                                    </ul>
+                                    <!-- sub-menu -->
+
+                                </li>
+
+                                <li><a href="javascript:void(0)"><i class="fa fa-bar-chart" aria-hidden="true"></i>
+                                        <span class="hide-item"> Procurement </span> <span class="drop-icon"><i
+                                                class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+
+                                    <!-- sub-menu -->
+                                    <ul class="sub-menu">
+                                        <li><a href="javascript:void(0)">Request <span class="drop-icon"><i
+                                                        class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+                                            <ul class="sub-sub">
+                                                <li><a href="#">Request Form</a></li>
+                                                <li><a href="#">Request List</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Quotation</a></li>
+                                        <li><a href="javascript:void(0)">Bid Analysis <span class="drop-icon"><i
+                                                        class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+                                            <ul class="sub-sub">
+                                                <li><a href="#">Bid Analysis Form</a></li>
+                                                <li><a href="#">Bid Analysis List</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="javascript:void(0)">Purchase Order <span class="drop-icon"><i
+                                                        class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+                                            <ul class="sub-sub">
+                                                <li><a href="#">Purchase Order Form</a></li>
+                                                <li><a href="#">Purchase Order List</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="javascript:void(0)">Good Received <span class="drop-icon"><i
+                                                        class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+                                            <ul class="sub-sub">
+                                                <li><a href="#">Good Received Form</a></li>
+                                                <li><a href="#">Good Received List</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="javascript:void(0)">Vendors <span class="drop-icon"><i
+                                                        class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+                                            <ul class="sub-sub">
+                                                <li><a href="#">Add Vendor</a></li>
+                                                <li><a href="#">Vendor List</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="javascript:void(0)">Committees <span class="drop-icon"><i
+                                                        class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+                                            <ul class="sub-sub">
+                                                <li><a href="#">Create Committee</a></li>
+                                                <li><a href="#">Committee List</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Units</a></li>
+                                    </ul>
+                                    <!-- sub-menu -->
+
+                                </li>
+
+                                <li><a href="javascript:void(0)"><i class="fa fa-server" aria-hidden="true"></i> <span
+                                            class="hide-item"> Project Management </span> <span class="drop-icon"><i
+                                                class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+
+                                    <!-- sub-menu -->
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Clients</a></li>
+                                        <li><a href="#">Projects</a></li>
+                                        <li><a href="#">Manage Tasks</a></li>
+                                        <li><a href="javascript:void(0)">Reports <span class="drop-icon"><i
+                                                        class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+                                            <ul class="sub-sub">
+                                                <li><a href="#">Project Lists</a></li>
+                                                <li><a href="#">Team Member</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <!-- sub-menu -->
+
+                                </li>
+
+                                <li><a href="javascript:void(0)"><i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                                        <span class="hide-item"> Recruitment </span> <span class="drop-icon"><i
+                                                class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+
+                                    <!-- sub-menu -->
+                                    <ul class="sub-menu">
+                                        <li><a href="javascript:void(0)">Candidate Information <span
+                                                    class="drop-icon"><i class="fa fa-angle-down"
+                                                        aria-hidden="true"></i></span></a>
+                                            <ul class="sub-sub">
+                                                <li><a href="#">Add New Candidate</a></li>
+                                                <li><a href="#">Manage Candidate</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Candidate Shortlist</a></li>
+                                        <li><a href="#">Interview</a></li>
+                                        <li><a href="#">Candidate Selection</a></li>
+                                    </ul>
+                                    <!-- sub-menu -->
+
+                                </li>
+
+
+                                <li><a href="javascript:void(0)"><i class="fa fa-pie-chart" aria-hidden="true"></i>
+                                        <span class="hide-item"> Reports </span> <span class="drop-icon"><i
+                                                class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+
+                                    <!-- sub-menu -->
+                                    <ul class="sub-menu">
+                                        <li><a href="javascript:void(0)">Attendance Report <span class="drop-icon"><i
+                                                        class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+                                            <ul class="sub-sub">
+                                                <li><a href="#">Daily Presents</a></li>
+                                                <li><a href="#">Monthly Presents</a></li>
+                                                <li><a href="#">Daily Absent</a></li>
+                                                <li><a href="#">Monthly Absent</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="javascript:void(0)">Leave Report <span class="drop-icon"><i
+                                                        class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+                                            <ul class="sub-sub">
+                                                <li><a href="#">Employee On Leave</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="javascript:void(0)">Employee Reports <span class="drop-icon"><i
+                                                        class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+                                            <ul class="sub-sub">
+                                                <li><a href="#">Demographic Report</a></li>
+                                                <li><a href="#">Positional Report</a></li>
+                                                <li><a href="#">Asset</a></li>
+                                                <li><a href="#">Benefit Report</a></li>
+                                                <li><a href="#">Custom Report</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Adhoc Report</a></li>
+                                    </ul>
+                                    <!-- sub-menu -->
+
+                                </li>
+
+                                <li><a href="javascript:void(0)"><i class="fa fa-star-o" aria-hidden="true"></i> <span
+                                            class="hide-item"> Reward Points </span> <span class="drop-icon"><i
+                                                class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+
+                                    <!-- sub-menu -->
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Point Settings</a></li>
+                                        <li><a href="#">Point Categories</a></li>
+                                        <li><a href="#">Management Points</a></li>
+                                        <li><a href="#">Collaborative Points</a></li>
+                                        <li><a href="#">Attendence Points</a></li>
+                                        <li><a href="#">Employee Points</a></li>
+                                    </ul>
+                                    <!-- sub-menu -->
+
+                                </li>
+
+                                <li><a href="javascript:void(0)"><i class="fa fa-cog" aria-hidden="true"></i> <span
+                                            class="hide-item"> Setting </span> <span class="drop-icon"><i
+                                                class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+
+                                    <!-- sub-menu -->
+                                    <ul class="sub-menu">
+                                        <li><a href="javascript:void(0)">User <span class="drop-icon"><i
+                                                        class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+                                            <ul class="sub-sub">
+                                                <li><a href="#">Add User</a></li>
+                                                <li><a href="#">User List</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="javascript:void(0)">Role Permission <span class="drop-icon"><i
+                                                        class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+                                            <ul class="sub-sub">
+                                                <li><a href="#">Permission Setup <span class="drop-icon"><i
+                                                                class="fa fa-angle-down"
+                                                                aria-hidden="true"></i></span></a></li>
+                                                <li><a href="#">Add Role</a></li>
+                                                <li><a href="#">Role List</a></li>
+                                                <li><a href="#">User Access Role</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Application Setting</a></li>
+                                        <li><a href="#">Mobile App Setting(Addons)</a></li>
+                                        <li><a href="#">Language</a></li>
+                                        <li><a href="#">Tax</a></li>
+                                        <li><a href="#">Backup and Download</a></li>
+                                    </ul>
+                                    <!-- sub-menu -->
+
+                                </li>
+
+                                <li><a href="javascript:void(0)"><i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                        <span class="hide-item"> Message </span> <span class="drop-icon"><i
+                                                class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+
+                                    <!-- sub-menu -->
+                                    <ul class="sub-menu">
+                                        <li><a href="#">New</a></li>
+                                        <li><a href="#">Inbox</a></li>
+                                        <li><a href="#">Sent</a></li>
+                                    </ul>
+                                    <!-- sub-menu -->
+
+                                </li>
+
+                                <li><a href="javascript:void(0)"><i class="fa fa-adn" aria-hidden="true"></i> <span
+                                            class="hide-item"> Add-ons </span> </a></li>
+
+                                <li><a href="javascript:void(0)"><i class="fa fa-cloud-download" aria-hidden="true"></i>
+                                        <span class="hide-item"> Update Now </span> </a></li>
+
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- menu -->
+
+
+                    <!-- main-contents -->
+                    <div class="main-contents">
+
+                        <!-- logo -->
+                        <div class="logo mobile-view">
+                            <a href="dashboard.html">
+                                <img class="small-logo" src="assets/img/logo-s.png" alt="logo">
+                                <img class="big-logo" src="assets/img/logo.png" alt="logo">
+                            </a>
+                        </div>
+                        <!-- logo -->
+
+
+                        <!-- header-area -->
+                        <div class="header-area">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="title">
+                                        <h2> <span class="mob"><i class="fa fa-bars" aria-hidden="true"></i></span>
+                                            <span class="menuwidth"><i class="fa fa-bars" aria-hidden="true"></i></span>
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="col-8">
+                                    <div class="notification">
+                                        <ul>
+                                            <li class="dropdown notifica">
+                                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-envelope-o" aria-hidden="true"></i> <span class="num">2</span> </a>
+
+                                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                    
+                                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                    
+                                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+
+                                                    <li class="footer"><a href="#">See All Messages</a></li>
+                                                </ul>
+
+                                                
+                                            </li>
+                                            <li class="dropdown">
+                                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <i class="fa fa-cog" aria-hidden="true"></i> </a>
+
+                                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                                                        <li><a class="dropdown-item" href="#"><i class="fa fa-user" aria-hidden="true"></i> profile</a></li>
+                                                        <li><a class="dropdown-item" href="#"><i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+                                                        <li><a class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> logout</a></li>
+                                                    </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- header-area -->
+
+                        <!-- contents -->
+                        <div class="contents">
+
+                            <!-- Breadcrumb -->
+                            <div class="breadcrumb-area">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"
+                                                    aria-hidden="true"></i> Home</a></li>
+                                        <li class="breadcrumb-item"><a href="#">Department</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Department</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                            <!-- Breadcrumb -->
+
+                            <!-- table-area  -->
+                            <div class="table-area">
+
+                                <!-- table-title -->
+                                <div class="table-title">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="depertment-name">
+                                                <h4>Department</h4>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="add-btn">
+                                                <ul>
+                                                    <li><button type="button" class="cus-btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-plus-circle"  aria-hidden="true"></i> Add New Department</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- table-title -->
+                                <div class="table-header">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="selectd">
+                                                <p>Show </p>
+                                                <select class="select2">
+                                                    <option selected>10</option>
+                                                    <option value="1">20</option>
+                                                    <option value="2">50</option>
+                                                    <option value="3">100</option>
+                                                </select>
+                                                <p> entries</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="export">
+                                                <div class="btn-group" role="group" aria-label="Basic outlined example">
+                                                    <button type="button" class="btn btn-outline-primary">Copy</button>
+                                                    <button type="button" class="btn btn-outline-primary">CSV</button>
+                                                    <button type="button" class="btn btn-outline-primary">Excel</button>
+                                                    <button type="button" class="btn btn-outline-primary">PDF</button>
+                                                    <button type="button" class="btn btn-outline-primary">Print</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="data-search">
+                                                <div class="input-group search">
+                                                    <input type="search" class="form-control" placeholder="Search...">
+                                                    <span class="input-group-text"><i class="fa fa-search" aria-hidden="true"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tables">
+                                    <table class="table table-striped table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>SL No</th>
+                                                <th>Department Name </th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Administration</td>
+                                                <td>
+                                                    <ul class="action">
+                                                        <li><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>HRM</td><td>
+                                                    <ul class="action">
+                                                        <li><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Marketing</td>
+                                                <td>
+                                                    <ul class="action">
+                                                        <li><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Marketing</td>
+                                                <td>
+                                                    <ul class="action">
+                                                        <li><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Marketing</td>
+                                                <td>
+                                                    <ul class="action">
+                                                        <li><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Marketing</td>
+                                                <td>
+                                                    <ul class="action">
+                                                        <li><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Marketing</td>
+                                                <td>
+                                                    <ul class="action">
+                                                        <li><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Marketing</td>
+                                                <td>
+                                                    <ul class="action">
+                                                        <li><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="table-footer">
+                                    <nav aria-label="...">
+                                        <ul class="pagination justify-content-end">
+                                            <li class="page-item disabled">
+                                                <span class="page-link">Previous</span>
+                                            </li>
+                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item active" aria-current="page">
+                                                <span class="page-link">2</span>
+                                            </li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#">Next</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <!-- table-area  -->
+
+                        </div>
+                    </div>
+                    <!-- main-contents -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- main-area -->
+
+
+
+    <!-- Js script links-->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/apexcharts.min.js"></script>
+    <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="assets/js/script.js"></script>
+ 
+</body>
+
+</html>
